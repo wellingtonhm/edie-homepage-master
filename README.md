@@ -43,6 +43,8 @@ Este site foi criado como resultado a um desafio [DevChallenges](https://devchal
 
 Utilizar [Material Design Icons](https://google.github.io/material-design-icons/) 
 
+Seguir este design: Link [Figma](https://www.figma.com/file/ahnGupP4JjTdVJDTRfMRF2) 
+
 ## Tecnologia
 
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
