@@ -82,6 +82,32 @@ nav ul li {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.menu-hamburger:hover {
+  cursor: pointer;
+}
+
+nav .menu-x {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 1.125rem;
+}
+
+nav .menu-x.show {
+  opacity: 1;
+  visibility: visible;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
 .menu-mobile.show {
   opacity: 1;
   visibility: visible;
@@ -156,6 +182,10 @@ nav ul li {
   padding: 0.75rem 1.5rem;
   color: #FFFFFF;
   font-size: 0.875rem;
+}
+
+.contact-email button:hover {
+  background-color: #100E1D;
 }
 
 /* SERVICES*/
@@ -261,7 +291,6 @@ nav ul li {
 }
 
 .see-more a {
-  text-decoration: none;
   color: #2D9CDB;
 }
 
@@ -408,6 +437,7 @@ footer {
 
 /* DESKTOP */
 @media (min-width: 750px) {
+  /* STRUCTURE */
   h1 {
     font-size: 2.25rem;
   }
@@ -418,6 +448,52 @@ footer {
   main {
     margin-bottom: 10rem;
   }
+  /* NAV */
+  .menu-hamburger {
+    opacity: 0;
+    visibility: hidden;
+  }
+  nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr max-content 0px;
+        grid-template-columns: 1fr -webkit-max-content 0px;
+        grid-template-columns: 1fr max-content 0px;
+    justify-items: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 6.5rem;
+  }
+  .menu-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu a {
+    color: #000000;
+    font-size: 1.2rem;
+  }
+  .menu a:hover {
+    color: #2D9CDB;
+  }
+  /* HOME */
   #home {
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
@@ -442,10 +518,12 @@ footer {
   .container {
     margin: 3rem;
   }
+  /* SERVICES */
   .content-services {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
+  /* OUR WORKS */
   .content-works {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -467,6 +545,7 @@ footer {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  /* CLIENTS */
   .content-clients {
     -ms-grid-columns: 1fr 2fr;
         grid-template-columns: 1fr 2fr;
@@ -482,6 +561,7 @@ footer {
   blockquote {
     font-size: 2.25rem;
   }
+  /* FOOTER */
   .footer-grid {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
@@ -490,12 +570,13 @@ footer {
   .copyright {
     padding-top: 3rem;
   }
-  .material-icons {
-    font-size: 36px;
-  }
 }
 
+/* DESKTOP 2*/
 @media (min-width: 1080px) {
+  .menu a {
+    font-size: 1.5rem;
+  }
   .container {
     margin: 3rem;
     margin-left: auto;
@@ -509,7 +590,10 @@ footer {
     font-size: 3rem;
   }
   nav {
-    margin: 2.625rem 3.25rem;
+    margin-left: 3.25rem;
+    margin-right: 3.25rem;
+    margin-top: 2.625rem;
+    margin-bottom: 6.5rem;
   }
   .container-home:nth-child(2) {
     margin-left: 3.25rem;

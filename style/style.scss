@@ -89,7 +89,31 @@ nav {
   }
 }
 
+a{
+  text-decoration: none;
+  color: #000000;
+}
 
+.menu-hamburger:hover {
+    cursor: pointer;
+
+}
+
+nav .menu-x {
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 1.125rem;
+
+}
+
+nav .menu-x.show {
+  opacity: 1;
+  visibility: visible;
+  color: #FFFFFF;
+  cursor: pointer;
+}
 
 .menu-mobile.show {
   opacity: 1;
@@ -167,6 +191,9 @@ nav {
     padding: 0.75rem 1.5rem;
     color: #FFFFFF;
     font-size: 0.875rem;
+  }
+  button:hover{
+    background-color: #100E1D;
   }
 }
 
@@ -270,7 +297,6 @@ nav {
   align-items: center;
 
   a {
-    text-decoration: none;
     color: #2D9CDB;
   }
 
@@ -425,6 +451,8 @@ footer {
 /* DESKTOP */
 @media (min-width: 750px) {
 
+  /* STRUCTURE */
+
   h1 {
     font-size: 2.25rem;
   }
@@ -438,6 +466,47 @@ footer {
     margin-bottom: 10rem;
   }
 
+  /* NAV */
+
+  .menu-hamburger {
+    opacity: 0;
+    visibility: hidden;
+
+  }
+  
+  nav {
+    display: grid;
+    grid-template-columns: 1fr max-content max($numbers: 0px);
+    justify-items: start;
+    align-items: center;
+    margin-bottom: 6.5rem;
+  }
+    
+  .menu-mobile {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    align-items: center;
+  }
+  
+  .menu {
+    display: flex;
+      a {
+        color: #000000; 
+        font-size: 1.2rem;
+      }
+      a:hover{
+        color: #2D9CDB;
+      }
+  }
+
+  /* HOME */
 
   #home {
     grid-template-columns: 2fr 1fr;
@@ -472,20 +541,24 @@ footer {
 
   }
 
+  /* SERVICES */
+
   .content-services {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  /* OUR WORKS */
 
   .content-works {
     grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
   }
 
-  .description-works{
-    figcaption{
+  .description-works {
+    figcaption {
       font-size: 0.875rem;
     }
-    
+
     p {
       font-size: 1.5rem;
     }
@@ -499,6 +572,8 @@ footer {
     font-size: 1.5rem;
     justify-content: flex-end;
   }
+
+  /* CLIENTS */
 
   .content-clients {
     grid-template-columns: 1fr 2fr;
@@ -514,6 +589,8 @@ footer {
     font-size: 2.25rem;
   }
 
+  /* FOOTER */
+
   .footer-grid {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0;
@@ -524,12 +601,19 @@ footer {
 
   }
 
-.material-icons{
-  font-size: 36px;
-}
+
 }
 
+/* DESKTOP 2*/
 @media (min-width: 1080px) {
+
+  .menu {
+      a {
+        font-size: 1.5rem;
+      }
+
+  }
+
 
   .container {
     margin: 3rem;
@@ -547,7 +631,10 @@ footer {
   }
 
   nav {
-    margin: 2.625rem 3.25rem;
+    margin-left: 3.25rem;
+    margin-right: 3.25rem;
+    margin-top: 2.625rem;
+    margin-bottom: 6.5rem;
   }
 
   .container-home:nth-child(2) {
