@@ -20,6 +20,8 @@
   </h3>
 </div>
 
+![screenshot](https://raw.githubusercontent.com/wellingtonhm/edie-homepage-master/master/src/edie-homepage-master.png)
+
 <!-- TABLE OF CONTENTS -->
 
 ## Indice
@@ -29,8 +31,6 @@
 - [Contato](#contato)
 
 ## Visão Geral
-
-![screenshot](https://raw.githubusercontent.com/wellingtonhm/edie-homepage-master/master/src/edie-homepage-master.png)
 
 Este site foi criado como resultado a um desafio [DevChallenges](https://devchallenges.io/challenges).
 
